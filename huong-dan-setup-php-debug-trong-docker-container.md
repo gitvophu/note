@@ -2,6 +2,12 @@
 
 ## Cách setup
 
+**Cài xdebug trong Dockerfile**
+Trong `Dockerfile` của php container, thêm dòng sau
+```
+RUN pecl install xdebug \
+    && docker-php-ext-enable xdebug
+```
 
 **Tạo file config xdebug**
 Tạo file `xdebug.ini` với nội dung như sau
